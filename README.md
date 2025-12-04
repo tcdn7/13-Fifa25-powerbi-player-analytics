@@ -115,7 +115,7 @@ The following measures are used in the report.
 
 1. Total number of player
 
-Player Count = COUNT('male_players'[Name])
+  Player Count = COUNT('male_players'[Name])
 
 * Counts non-blank player names
 
@@ -131,7 +131,7 @@ Player Count = COUNT('male_players'[Name])
 
 2. Average overall rating
 
-Avg OVR = AVERAGE('male_players'[OVR])
+  Avg OVR = AVERAGE('male_players'[OVR])
 
 * Replaces the implicit “Average of OVR” with an explicit measure
 
@@ -145,11 +145,11 @@ Avg OVR = AVERAGE('male_players'[OVR])
 
 3. Elite players (OVR ≥ 80)
 
-High OVR Players = 
-CALCULATE(
-    COUNTROWS('male_players'),
-    'male_players'[OVR] >= 80
-)
+  High OVR Players = 
+  CALCULATE(
+      COUNTROWS('male_players'),
+      'male_players'[OVR] >= 80
+  )
 
 * Counts players with OVR >= 80 under the current filter context
 
@@ -163,11 +163,11 @@ CALCULATE(
 
 4. Elite player rate
 
-High OVR Rate = 
-DIVIDE(
-    [High OVR Players],
-    [Player Count]
-)
+  High OVR Rate = 
+  DIVIDE(
+      [High OVR Players],
+      [Player Count]
+  )
 
 * Percentage of players with OVR ≥ 80 within the current filter context
 
@@ -191,7 +191,7 @@ The report page is structured in three horizontal bands:
 
 1. KPI Strip (Top)
 
-Three main cards:
+  Three main cards:
 
 * Total Players → Player Count
 
@@ -199,15 +199,15 @@ Three main cards:
 
 * 80+ Players Rate → High OVR Rate
 
-Optional extra KPI:
+  Optional extra KPI:
 
 * 80+ Players → High OVR Players
 
-These give an instant overview of dataset size and quality.
+  These give an instant overview of dataset size and quality.
 
 2. League-level Insights (Middle)
 
-Two side-by-side column charts:
+  Two side-by-side column charts:
 
 - Average OVR by League
 
@@ -231,7 +231,7 @@ Two side-by-side column charts:
 
     * Data labels show the share of elite players per league (%)
 
-Observed pattern (example):
+  Observed pattern (example):
 
 * Top 5 leagues by average OVR and by elite-player rate:
 
@@ -245,7 +245,7 @@ Observed pattern (example):
 
     * Saudi League (high elite density due to a few star-heavy squads)
 
-Premier League clearly stands out:
+  Premier League clearly stands out:
 
 * Higher average rating
 
