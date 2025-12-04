@@ -35,7 +35,7 @@ fifa25-powerbi-player-analytics/
 │   └─ fifa25_player_dashboard.pbix      # Main Power BI report
 │
 ├─ data/
-│   └─ male_players.csv                  # Player dataset (if license allows)
+│   └─ male_players.csv                  # Player dataset
 │
 ├─ screenshots/
 │   ├─ fifa25.jpg                        # Hero image used in README
